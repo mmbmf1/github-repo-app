@@ -38,7 +38,6 @@ ul {
     margin: 0;
 }
 
-
 li, img {
     max-width: 500px;
 }
@@ -58,6 +57,7 @@ a:visited, a:active {
 
 .error-message {
     color: red;
+    text-align: center;
 }
 
 .hidden {
