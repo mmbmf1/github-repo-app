@@ -12,6 +12,7 @@ function getResults(searchUser) {
     .then(responseJson => displayResults(responseJson))
     .catch(error => {
         $('#js-error-message').text('Something went wrong');
+        $('#results').addClass('hidden');
     });
 }
 
@@ -19,6 +20,7 @@ function getResults(searchUser) {
 function displayResults (responseJson) {
     console.log(responseJson);
     $('#results-list').empty();
+    $('#js-error-message').empty();
     let maxResults = $('#js-max-results').val();
     for (let i = 0; i < responseJson.length & i < maxResults; i++) {
         $('#results-list').append(
